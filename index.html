@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="kk" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECORITY — Smart Sorption for Cleaner Water</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">ECORITY</div>
+            
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#about" id="navAbout" class="hover:text-emerald-600">Жоба туралы</a>
+                <a href="#calculator" id="navCalc" class="hover:text-emerald-600">Калькулятор</a>
+                <a href="#shop" id="navShop" class="hover:text-emerald-600">Дүкен</a>
+                <a href="#faq" id="navFaq" class="hover:text-emerald-600">FAQ</a>
+                <a href="#cabinet" id="navCabinet" class="hover:text-emerald-600">Жеке кабинет</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200">
+                    <span id="themeIcon">🌙</span>
+                </button>
+
+                <div class="flex space-x-1 text-sm font-semibold">
+                    <button onclick="changeLang('kk')" id="btn-kk" class="px-2 py-1 rounded bg-emerald-600 text-white">KZ</button>
+                    <button onclick="changeLang('ru')" id="btn-ru" class="px-2 py-1 rounded text-slate-500 dark:text-slate-400">RU</button>
+                    <button onclick="changeLang('en')" id="btn-en" class="px-2 py-1 rounded text-slate-500 dark:text-slate-400">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <span id="heroBadge" class="bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Smart Sorption</span>
+            <h1 id="heroTitle" class="text-3xl md:text-5xl font-extrabold mt-4 mb-6 leading-tight">
+                Ластанған суларды ауыр металдардан тазартуға арналған биосорбент
+            </h1>
+            <p id="heroDesc" class="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-8">
+                Анар, банан және апельсин қабықтары негізінде жасалған табиғи өнім.
+            </p>
+            <div class="flex space-x-4">
+                <a href="#calculator" id="btnCalc" class="bg-emerald-600 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:bg-emerald-700 transition">Калькулятор</a>
+                <a href="#shop" id="btnShop" class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-6 py-3 rounded-xl font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition">Дүкенге өту</a>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <img src="WhatsApp Image 2026-10-24 at 15.22.00 (1).jpeg" alt="ECORITY Main Product" class="rounded-2xl shadow-xl w-full max-w-md h-auto object-cover border-4 border-white dark:border-slate-700">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white dark:bg-slate-800 py-16 border-t border-slate-100 dark:border-slate-700 transition-colors">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <img src="WhatsApp Image 2026-10-24 at 15.21.59.jpeg" alt="ECORITY Packaging Side" class="rounded-2xl shadow-lg w-full max-w-sm h-auto object-cover">
+                </div>
+                <div>
+                    <h2 id="aboutTitle" class="text-3xl font-bold mb-4">ECORITY деген не?</h2>
+                    <p id="aboutDesc" class="text-slate-600 dark:text-slate-300 mb-6">
+                        ECORITY — ауыр металдармен (мырыш және марганец) ластанған суларды тазартуға арналған ғылыми-зерттеу негізінде жасалған эко-биосорбент.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300 p-2 rounded-lg font-bold">01</div>
+                            <div>
+                                <h4 id="feat1Title" class="font-semibold">Мырыш пен Марганецті жою</h4>
+                                <p id="feat1Desc" class="text-sm text-slate-500 dark:text-slate-400">Мырыш пен марганецті су құрамынан 100% пайызға тиімділікпен тазартады.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300 p-2 rounded-lg font-bold">02</div>
+                            <div>
+                                <h4 id="feat2Title" class="font-semibold">Ғылыми дәлелденген дозировка</h4>
+                                <p id="feat2Desc" class="text-sm text-slate-500 dark:text-slate-400">100 мл суға 0.5–3 грамм биосорбент ұнтағы қолданылады.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-16 max-w-4xl mx-auto px-4">
+        <div class="bg-emerald-900 text-white rounded-3xl p-8 md:p-12 shadow-xl">
+            <h2 id="calcTitle" class="text-2xl md:text-3xl font-bold mb-2 text-center">ДОЗИРОВКА КАЛЬКУЛЯТОРЫ</h2>
+            <p id="calcSubtitle" class="text-emerald-200 text-center mb-8">Су көлемін енгізіп, қажетті ұнтақ мөлшері мен қорап санын есептеңіз.</p>
+            
+            <div class="bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 p-6 md:p-8 rounded-2xl shadow-inner transition-colors">
+                <div class="mb-6">
+                    <label id="labelWater" class="block text-sm font-bold mb-2">Тазартылатын су көлемі (Литр):</label>
+                    <input type="number" id="waterVolume" min="0.1" step="0.1" placeholder="Мысалы: 1" class="w-full p-4 border border-slate-300 dark:border-slate-600 dark:bg-slate-700 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none text-lg">
+                </div>
+                <button onclick="calculateEcority()" id="btnCalcAction" class="w-full bg-emerald-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-emerald-700 transition shadow-md">Есептеу</button>
+
+                <div id="calcResults" class="mt-8 hidden border-t border-slate-200 dark:border-slate-700 pt-6 space-y-4">
+                    <div class="flex justify-between text-lg">
+                        <span id="labelPowder" class="text-slate-600 dark:text-slate-400">Қажетті ұнтақ мөлшері:</span>
+                        <span class="font-bold text-emerald-600 dark:text-emerald-400" id="resPowder">-</span>
+                    </div>
+                    <div class="flex justify-between text-lg">
+                        <span id="labelPacks" class="text-slate-600 dark:text-slate-400">Ұсынылатын қорап саны (4 пакетик/қорап):</span>
+                        <span class="font-bold text-emerald-600 dark:text-emerald-400" id="resPacks">-</span>
+                    </div>
+                    <div class="flex justify-between text-lg">
+                        <span id="labelPrice" class="text-slate-600 dark:text-slate-400">Жалпы құны (1 200 ₸ / қорап):</span>
+                        <span class="font-bold text-emerald-600 dark:text-emerald-400" id="resPrice">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-16 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 id="shopTitle" class="text-3xl font-bold mb-2">ECORITY ДҮКЕНІ</h2>
+            <p id="shopSubtitle" class="text-slate-600 dark:text-slate-400">1 қорапта 4 үлкен пакетик бар (әрқайсысы 50г, жалпы 200г) — 1 200 ₸.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <!-- Single Pack -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="WhatsApp Image 2026-10-24 at 15.22.00 (1).jpeg" alt="Single Pack" class="rounded-xl w-full h-64 object-cover mb-4">
+                    <h3 class="font-bold text-lg mb-1">Single Pack</h3>
+                    <p id="pack1Desc" class="text-xs text-slate-500 mb-4">1 қорап (4 пакетик × 50г)</p>
+                </div>
+                <div>
+                    <div class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">1 200 ₸</div>
+                    <button onclick="addToCart('Single Pack (1 қорап)', 1200)" class="w-full bg-slate-900 dark:bg-slate-700 text-white py-2.5 rounded-xl font-medium hover:bg-emerald-600 transition btnAddCart">Себетке қосу</button>
+                </div>
+            </div>
+
+            <!-- Double Pack -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="WhatsApp Image 2026-10-24 at 15.22.00.jpeg" alt="Double Pack" class="rounded-xl w-full h-64 object-cover mb-4">
+                    <h3 class="font-bold text-lg mb-1">Double Pack</h3>
+                    <p id="pack2Desc" class="text-xs text-slate-500 mb-4">2 қорап (8 пакетик)</p>
+                </div>
+                <div>
+                    <div class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">2 400 ₸</div>
+                    <button onclick="addToCart('Double Pack (2 қорап)', 2400)" class="w-full bg-slate-900 dark:bg-slate-700 text-white py-2.5 rounded-xl font-medium hover:bg-emerald-600 transition btnAddCart">Себетке қосу</button>
+                </div>
+            </div>
+
+            <!-- Triple Pack -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full">POPULAR</span>
+                <div>
+                    <img src="WhatsApp Image 2026-10-24 at 15.21.59 (1).jpeg" alt="Triple Pack" class="rounded-xl w-full h-64 object-cover mb-4">
+                    <h3 class="font-bold text-lg mb-1">Triple Pack</h3>
+                    <p id="pack3Desc" class="text-xs text-slate-500 mb-4">3 қорап (12 пакетик)</p>
+                </div>
+                <div>
+                    <div class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">3 600 ₸</div>
+                    <button onclick="addToCart('Triple Pack (3 қорап)', 3600)" class="w-full bg-emerald-600 text-white py-2.5 rounded-xl font-medium hover:bg-emerald-700 transition btnAddCart">Себетке қосу</button>
+                </div>
+            </div>
+
+            <!-- Combo Pack -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="WhatsApp Image 2026-10-24 at 15.21.59.jpeg" alt="Combo Pack" class="rounded-xl w-full h-64 object-cover mb-4">
+                    <h3 class="font-bold text-lg mb-1">Combo Pack</h3>
+                    <p id="pack4Desc" class="text-xs text-slate-500 mb-4">5 қорап (20 пакетик / 1 кг)</p>
+                </div>
+                <div>
+                    <div class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">6 000 ₸</div>
+                    <button onclick="addToCart('Combo Pack (5 қорап)', 6000)" class="w-full bg-slate-900 dark:bg-slate-700 text-white py-2.5 rounded-xl font-medium hover:bg-emerald-600 transition btnAddCart">Себетке қосу</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-slate-100 dark:bg-slate-800/50 transition-colors">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 id="faqTitle" class="text-3xl font-bold text-center mb-8">Жиі қойылатын сұрақтар (FAQ)</h2>
+            <div class="space-y-4">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
+                    <h3 id="faqQ1" class="font-bold text-lg mb-2">ECORITY деген не?</h3>
+                    <p id="faqA1" class="text-slate-600 dark:text-slate-300">ECORITY — суды мырыш және марганец сияқты ауыр металдардан тазартатын табиғи агроқалдықтардан (анар, банан, апельсин қабықтары) жасалған биосорбент.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
+                    <h3 id="faqQ2" class="font-bold text-lg mb-2">Бір қорапта қанша пакетик бар?</h3>
+                    <p id="faqA2" class="text-slate-600 dark:text-slate-300">Әрбір стандартты ECORITY қорабында дәл 4 үлкен пакетик биосорбент ұнтағы бар (әрқайсысы 50г, жалпы 200г, бағасы 1 200 ₸).</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
+                    <h3 id="faqQ3" class="font-bold text-lg mb-2">Қажетті ұнтақ мөлшерін қалай есептеймін?</h3>
+                    <p id="faqA3" class="text-slate-600 dark:text-slate-300">Жоғарыда орналасқан интерактивті Калькуляторға тазартатын су көлемін енгізсеңіз, жүйе автоматты түрде грамм, пакетик және қорап санын есептеп береді.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Cabinet -->
+    <section id="cabinet" class="py-16 max-w-4xl mx-auto px-4">
+        <h2 id="cabTitle" class="text-3xl font-bold mb-2">Жеке кабинет</h2>
+        <p id="cabSubtitle" class="text-slate-600 dark:text-slate-400 mb-8">Жеке деректеріңізді енгізіп, тапсырыстар тарихын бақылаңыз.</p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <h3 id="cabProfileHead" class="font-bold text-lg mb-4">Клиент профилі</h3>
+                <form onsubmit="event.preventDefault(); alert('Деректер сақталды!');" class="space-y-4">
+                    <div>
+                        <label id="lblCabName" class="block text-xs font-semibold text-slate-500 mb-1">Аты-жөніңіз</label>
+                        <input type="text" placeholder="Атыңызды енгізіңіз" class="w-full p-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl text-sm outline-none focus:ring-2 focus:ring-emerald-500">
+                    </div>
+                    <div>
+                        <label id="lblCabEmail" class="block text-xs font-semibold text-slate-500 mb-1">Email</label>
+                        <input type="email" placeholder="example@mail.com" class="w-full p-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl text-sm outline-none focus:ring-2 focus:ring-emerald-500">
+                    </div>
+                    <div>
+                        <label id="lblCabCity" class="block text-xs font-semibold text-slate-500 mb-1">Қала</label>
+                        <input type="text" placeholder="Мысалы: Ақтау" class="w-full p-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl text-sm outline-none focus:ring-2 focus:ring-emerald-500">
+                    </div>
+                    <button id="btnSaveCab" type="submit" class="w-full bg-emerald-600 text-white py-2.5 rounded-xl text-sm font-medium hover:bg-emerald-700 transition">Сақтау</button>
+                </form>
+            </div>
+
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <h3 id="cabOrdersHead" class="font-bold text-lg mb-4">Тапсырыстар тарихы</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-500">
+                                <th class="pb-2">№</th>
+                                <th id="thItem" class="pb-2">Тауар</th>
+                                <th id="thPrice" class="pb-2">Сумма</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTable" class="divide-y divide-slate-100 dark:divide-slate-700">
+                            <tr id="emptyOrdersRow">
+                                <td colspan="3" id="emptyOrdersText" class="py-6 text-center text-slate-400 italic">Әзірге тапсырыстар жоқ. Дүкеннен тауар таңдаңыз!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 ECORITY. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <!-- Translations & JS Logic -->
+    <script>
+        const translations = {
+            kk: {
+                navAbout: "Жоба туралы", navCalc: "Калькулятор", navShop: "Дүкен", navFaq: "FAQ", navCabinet: "Жеке кабинет",
+                heroBadge: "Smart Sorption", heroTitle: "Ластанған суларды ауыр металдардан тазартуға арналған биосорбент",
+                heroDesc: "Анар, банан және апельсин қабықтары негізінде жасалған табиғи өнім.",
+                btnCalc: "Калькулятор", btnShop: "Дүкенге өту",
+                aboutTitle: "ECORITY деген не?", aboutDesc: "ECORITY — ауыр металдармен (мырыш және марганец) ластанған суларды тазартуға арналған ғылыми-зерттеу негізінде жасалған эко-биосорбент.",
+                feat1Title: "Мырыш пен Марганецті жою", feat1Desc: "Мырыш пен марганецті су құрамынан 100% пайызға тиімділікпен тазартады.",
+                feat2Title: "Ғылыми дәлелденген дозировка", feat2Desc: "100 мл суға 0.5–3 грамм биосорбент ұнтағы қолданылады.",
+                calcTitle: "ДОЗИРОВКА КАЛЬКУЛЯТОРЫ", calcSubtitle: "Су көлемін енгізіп, қажетті ұнтақ мөлшері мен қорап санын есептеңіз.",
+                labelWater: "Тазартылатын су көлемі (Литр):", btnCalcAction: "Есептеу",
+                labelPowder: "Қажетті ұнтақ мөлшері:", labelPacks: "Ұсынылатын қорап саны (4 пакетик/қорап):", labelPrice: "Жалпы құны (1 200 ₸ / қорап):",
+                shopTitle: "ECORITY ДҮКЕНІ", shopSubtitle: "1 қорапта 4 үлкен пакетик бар (әрқайсысы 50г, жалпы 200г) — 1 200 ₸.",
+                pack1Desc: "1 қорап (4 пакетик × 50г)", pack2Desc: "2 қорап (8 пакетик)", pack3Desc: "3 қорап (12 пакетик)", pack4Desc: "5 қорап (20 пакетик / 1 кг)",
+                faqTitle: "Жиі қойылатын сұрақтар (FAQ)",
+                faqQ1: "ECORITY деген не?", faqA1: "ECORITY — суды мырыш және марганец сияқты ауыр металдардан тазартатын табиғи агроқалдықтардан (анар, банан, апельсин қабықтары) жасалған биосорбент.",
+                faqQ2: "Бір қорапта қанша пакетик бар?", faqA2: "Әрбір стандартты ECORITY қорабында дәл 4 үлкен пакетик биосорбент ұнтағы бар (әрқайсысы 50г, жалпы 200г, бағасы 1 200 ₸).",
+                faqQ3: "Қажетті ұнтақ мөлшерін қалай есептеймін?", faqA3: "Жоғарыда орналасқан интерактивті Калькуляторға тазартатын су көлемін енгізсеңіз, жүйе автоматты түрде грамм, пакетик және қорап санын есептеп береді.",
+                cabTitle: "Жеке кабинет", cabSubtitle: "Жеке деректеріңізді енгізіп, тапсырыстар тарихын бақылаңыз.",
+                cabProfileHead: "Клиент профилі", lblCabName: "Аты-жөніңіз", lblCabEmail: "Email", lblCabCity: "Қала", btnSaveCab: "Сақтау",
+                cabOrdersHead: "Тапсырыстар тарихы", thItem: "Тауар", thPrice: "Сумма", emptyOrdersText: "Әзірге тапсырыстар жоқ. Дүкеннен тауар таңдаңыз!"
+            },
+            ru: {
+                navAbout: "О проекте", navCalc: "Калькулятор", navShop: "Магазин", navFaq: "FAQ", navCabinet: "Личный кабинет",
+                heroBadge: "Smart Sorption", heroTitle: "Биосорбент для очистки загрязненных вод от тяжелых металлов",
+                heroDesc: "Натуральный продукт на основе корки граната, банана и апельсина.",
+                btnCalc: "Калькулятор", btnShop: "В магазин",
+                aboutTitle: "Что такое ECORITY?", aboutDesc: "ECORITY — исследовательский эко-биосорбент для очистки вод, загрязненных тяжелыми металлами (цинком и марганцем).",
+                feat1Title: "Удаление Цинка и Марганца", feat1Desc: "Очищает воду от цинка и марганца на 100%.",
+                feat2Title: "Научно подтвержденная дозировка", feat2Desc: "Используется 0.5–3 грамма порошка биосорбента на 100 мл воды.",
+                calcTitle: "КАЛЬКУЛЯТОР ДОЗИРОВКИ", calcSubtitle: "Введите объем воды для расчета нужного количества порошка и коробок.",
+                labelWater: "Объем очищаемой воды (Литры):", btnCalcAction: "Рассчитать",
+                labelPowder: "Необходимый объем порошка:", labelPacks: "Рекомендуемое количество коробок (4 пакетика/коробка):", labelPrice: "Общая стоимость (1 200 ₸ / коробка):",
+                shopTitle: "МАГАЗИН ECORITY", shopSubtitle: "В 1 коробке 4 больших пакетика (по 50г, всего 200г) — 1 200 ₸.",
+                pack1Desc: "1 коробка (4 пакетика × 50г)", pack2Desc: "2 коробки (8 пакетиков)", pack3Desc: "3 коробки (12 пакетиков)", pack4Desc: "5 коробок (20 пакетиков / 1 кг)",
+                faqTitle: "Часто задаваемые вопросы (FAQ)",
+                faqQ1: "Что такое ECORITY?", faqA1: "ECORITY — эко-биосорбент из агроотходов (корок граната, банана, апельсина) для очистки воды от цинка и марганца.",
+                faqQ2: "Сколько пакетиков в одной коробке?", faqA2: "Каждая стандартная коробка ECORITY содержит ровно 4 больших пакетика по 50г (всего 200г порошка, цена 1 200 ₸).",
+                faqQ3: "Как рассчитать необходимый объем?", faqA3: "Введите объем воды в литрах в Калькулятор выше, и система автоматически рассчитает количество грамм, пакетиков и коробок.",
+                cabTitle: "Личный кабинет", cabSubtitle: "Управляйте личными данными и отслеживайте историю заказов.",
+                cabProfileHead: "Профиль клиента", lblCabName: "Ваше имя", lblCabEmail: "Email", lblCabCity: "Город", btnSaveCab: "Сохранить",
+                cabOrdersHead: "История заказов", thItem: "Товар", thPrice: "Сумма", emptyOrdersText: "Заказов пока нет. Выберите товар в магазине!"
+            },
+            en: {
+                navAbout: "About Us", navCalc: "Calculator", navShop: "Shop", navFaq: "FAQ", navCabinet: "Dashboard",
+                heroBadge: "Smart Sorption", heroTitle: "Biosorbent for Purifying Contaminated Water from Heavy Metals",
+                heroDesc: "A natural product made from pomegranate, banana, and orange peels.",
+                btnCalc: "Calculator", btnShop: "Go to Shop",
+                aboutTitle: "What is ECORITY?", aboutDesc: "ECORITY is a research-backed eco-biosorbent developed to clean heavy metal contaminated waters (Zinc and Manganese).",
+                feat1Title: "Removal of Zinc and Manganese", feat1Desc: "Removes zinc and manganese from water with 100% efficiency.",
+                feat2Title: "Research-Validated Dosage", feat2Desc: "Applied at 0.5–3 grams of biosorbent powder per 100 ml of water.",
+                calcTitle: "DOSAGE CALCULATOR", calcSubtitle: "Enter water volume to estimate required powder amount and box count.",
+                labelWater: "Water Volume to Treat (Liters):", btnCalcAction: "Calculate",
+                labelPowder: "Required Powder Amount:", labelPacks: "Recommended Boxes (4 sachets/box):", labelPrice: "Total Price (1,200 KZT / box):",
+                shopTitle: "ECORITY SHOP", shopSubtitle: "1 box contains 4 large sachets (50g each, 200g total) — 1,200 KZT.",
+                pack1Desc: "1 Box (4 sachets × 50g)", pack2Desc: "2 Boxes (8 sachets)", pack3Desc: "3 Boxes (12 sachets)", pack4Desc: "5 Boxes (20 sachets / 1 kg)",
+                faqTitle: "Frequently Asked Questions (FAQ)",
+                faqQ1: "What is ECORITY?", faqA1: "ECORITY is an eco-friendly biosorbent made from agrowaste (pomegranate, banana, orange peels) for purifying heavy metals (Zinc, Manganese) from water.",
+                faqQ2: "How many sachets are in one box?", faqA2: "Every standard ECORITY box contains exactly 4 large 50g sachets (200g total powder, priced at 1,200 KZT).",
+                faqQ3: "How do I calculate required amount?", faqA3: "Enter your total water volume in Liters into the Dosage Calculator above, and the system will instantly calculate grams, sachets, and boxes required.",
+                cabTitle: "User Dashboard", cabSubtitle: "Manage your profile details and view order history.",
+                cabProfileHead: "Client Profile", lblCabName: "Full Name", lblCabEmail: "Email", lblCabCity: "City", btnSaveCab: "Save Profile",
+                cabOrdersHead: "Order History", thItem: "Item", thPrice: "Amount", emptyOrdersText: "No orders yet. Add items from the shop!"
+            }
+        };
+
+        let currentLang = 'kk';
+        let orderCount = 0;
+
+        function changeLang(lang) {
+            currentLang = lang;
+            ['kk', 'ru', 'en'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (l === lang) {
+                    btn.className = "px-2 py-1 rounded bg-emerald-600 text-white";
+                } else {
+                    btn.className = "px-2 py-1 rounded text-slate-500 dark:text-slate-400";
+                }
+            });
+
+            const dict = translations[lang];
+            for (let key in dict) {
+                const el = document.getElementById(key);
+                if (el) el.innerText = dict[key];
+            }
+            document.querySelectorAll('.btnAddCart').forEach(btn => btn.innerText = lang === 'kk' ? 'Себетке қосу' : (lang === 'ru' ? 'В корзину' : 'Add to Cart'));
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.innerText = '🌙';
+            } else {
+                html.classList.add('dark');
+                icon.innerText = '☀️';
+            }
+        }
+
+        function calculateEcority() {
+            const liters = parseFloat(document.getElementById('waterVolume').value);
+            const resultsBlock = document.getElementById('calcResults');
+
+            if (isNaN(liters) || liters <= 0) {
+                alert(currentLang === 'kk' ? 'Су көлемін дұрыс енгізіңіз!' : 'Введите корректный объем!');
+                return;
+            }
+
+            const totalGramsMin = (liters * 5).toFixed(1);
+            const totalGramsMax = (liters * 30).toFixed(1);
+
+            const boxesNeeded = Math.ceil((liters * 15) / 200) || 1;
+            const totalPrice = boxesNeeded * 1200;
+
+            document.getElementById('resPowder').innerText = `${totalGramsMin}г – ${totalGramsMax}г`;
+            document.getElementById('resPacks').innerText = `${boxesNeeded} қорап (${boxesNeeded * 4} пакетик)`;
+            document.getElementById('resPrice').innerText = `${totalPrice.toLocaleString()} ₸`;
+
+            resultsBlock.classList.remove('hidden');
+        }
+
+        function addToCart(itemName, price) {
+            orderCount++;
+            const table = document.getElementById('ordersTable');
+            const emptyRow = document.getElementById('emptyOrdersRow');
+
+            if (emptyRow) {
+                emptyRow.style.display = 'none';
+            }
+
+            const newRow = document.createElement('tr');
+            newRow.className = "hover:bg-slate-50 dark:hover:bg-slate-700/50 transition";
+            newRow.innerHTML = `
+                <td class="py-3 font-mono text-xs">#10${orderCount}</td>
+                <td class="font-medium">${itemName}</td>
+                <td class="font-bold text-emerald-600 dark:text-emerald-400">${price.toLocaleString()} ₸</td>
+            `;
+            table.appendChild(newRow);
+
+            alert(currentLang === 'kk' ? 'Тауар себетке қосылды және жеке кабинетке енгізілді!' : 'Товар добавлен в корзину и личный кабинет!');
+        }
+    </script>
+</body>
+</html>
